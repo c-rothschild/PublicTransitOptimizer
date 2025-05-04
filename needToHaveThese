@@ -1,0 +1,9 @@
+Some Algorithms Needed:
+  A grouping algorithm that can put people into group to save running resource
+    KNN
+      How to categorize...?
+        distance between each "person" 
+    ...
+  A path finding algorithm for each "group of people" to find path
+    Maybe A* for finding path
+    Some defualt path finding algorithm in other package
