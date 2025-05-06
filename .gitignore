@@ -1,5 +1,8 @@
 map2graph/cache
+map2graph/NYC_bus_stops.gml
+map2graph/openkml.ipynb
 data/doc.kml
+
 .DS_Store
 # Byte-compiled / optimized / DLL files
 __pycache__/
