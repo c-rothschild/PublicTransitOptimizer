@@ -1,6 +1,6 @@
 map2graph/cache
 map2graph/NYC_bus_stops.gml
-map2graph/graph_data/stations.graphml
+# map2graph/graph_data/stations.graphml
 data/doc.kml
 map2graph/mta-info
 
