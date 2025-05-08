@@ -10,6 +10,7 @@ import aiohttp
 from tqdm import tqdm
 
 load_dotenv()
+
 MTA_API_KEY = os.getenv('MTA_API_KEY')
 GRAPHML_PATH = os.getenv('GRAPHML_PATH')
 ROUTE_LISTS_PATH = os.getenv('ROUTE_LISTS_PATH')
@@ -46,16 +47,16 @@ class BusMap:
             json.dump(self.bus_stop_info, file, indent=4)
 
 
-    def set_route_subgraphs(self, file_path=False):
-        self.route_graphs = {}
+    def set_route_node_lists(self, file_path=False):
+        self.route_node_lists = {}
         for name, route_list in tqdm(self.route_lists.items(), desc="Processing dictionary"):
-            self.route_graphs[name] = self.get_route_subgraph(route_list) 
+            self.route_node_lists[name] = self.get_route_node_list(route_list) 
         if file_path:
             with open(file_path, 'w') as file:
-                json.dump(self.route_graphs, file, indent=4)
+                json.dump(self.route_node_lists, file, indent=4)
 
 
-    def get_route_subgraph(self, route_list):
+    def get_route_node_list(self, route_list):
         osmid_list = list(map(lambda x: self.bus_stop_info[x]['osmid'], route_list))
         full_route = []
         for i in range(1, len(osmid_list)):
@@ -74,11 +75,18 @@ class BusMap:
         osmid_list = list(map(lambda x: self.bus_stop_info[x]['osmid'], route_list))
         print(osmid_list)
         ox.plot.plot_graph_route(self.G, osmid_list)
+    
+    def load_route_node_lists(self, file_path):
+        with open(file_path) as json_file:
+            self.route_node_lists = json.load(json_file)
             
 
 
 if __name__ == "__main__":
     myMap = BusMap()
-    myMap.set_route_subgraphs(file_path='map2graph/graph_data/route_node_lists.json')
-
+    myMap.load_route_node_lists('map2graph/graph_data/route_node_lists.json')
+    print(myMap.route_node_lists)
+    ox.plot.plot_graph_route(myMap.G, myMap.route_node_list['BAY RIDGE SHORE RD via 3 AV'])
+    
+G.nodes[???]['people'] = []
     
