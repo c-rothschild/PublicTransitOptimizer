@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 import asyncio
 import aiohttp
 from tqdm import tqdm
+import geopandas as gpd
 
 load_dotenv()
 
@@ -85,8 +86,8 @@ class BusMap:
 if __name__ == "__main__":
     myMap = BusMap()
     myMap.load_route_node_lists('map2graph/graph_data/route_node_lists.json')
-    print(myMap.route_node_lists)
-    ox.plot.plot_graph_route(myMap.G, myMap.route_node_list['BAY RIDGE SHORE RD via 3 AV'])
+    #ox.plot.plot_graph_route(myMap.G, list(myMap.route_node_lists.values())[0])
+    print(myMap.G.get_edge_data(42430633,3270031002))
     
-G.nodes[???]['people'] = []
+    
     
