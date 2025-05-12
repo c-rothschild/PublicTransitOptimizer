@@ -48,46 +48,22 @@ class BusMap:
             json.dump(self.bus_stop_info, file, indent=4)
 
 
-    def set_route_node_lists(self, file_path=False):
-        self.route_node_lists = {}
-        for name, route_list in tqdm(self.route_lists.items(), desc="Processing dictionary"):
-            self.route_node_lists[name] = self.get_route_node_list(route_list) 
-        if file_path:
-            with open(file_path, 'w') as file:
-                json.dump(self.route_node_lists, file, indent=4)
-
-
-    def get_route_node_list(self, route_list):
-        osmid_list = list(map(lambda x: self.bus_stop_info[x]['osmid'], route_list))
-        full_route = []
-        for i in range(1, len(osmid_list)):
-            path = ox.routing.shortest_path(self.G, osmid_list[i - 1], osmid_list[i])
-
-            if not path:
-                print(f'error: {(osmid_list[i - 1], osmid_list[i])}')
-            else:
-                full_route.extend(path[1:])
-        return full_route
-
-
 
     def plot_route(self, route_name):
+        '''
+        plot a given bus route on a map
+        find the route name you would like to plot by searching through all_route_lists.json or self.routes
+        '''
         route_list = self.route_lists[route_name]
         osmid_list = list(map(lambda x: self.bus_stop_info[x]['osmid'], route_list))
-        print(osmid_list)
         ox.plot.plot_graph_route(self.G, osmid_list)
     
-    def load_route_node_lists(self, file_path):
-        with open(file_path) as json_file:
-            self.route_node_lists = json.load(json_file)
             
 
 
 if __name__ == "__main__":
     myMap = BusMap()
-    myMap.load_route_node_lists('map2graph/graph_data/route_node_lists.json')
-    #ox.plot.plot_graph_route(myMap.G, list(myMap.route_node_lists.values())[0])
-    print(myMap.G.get_edge_data(42430633,3270031002))
+    myMap.plot_route('M101 - LIMITED EAST VILLAGE 3 AV-6 ST via LEX')
     
     
     
