@@ -694,8 +694,8 @@
         "MTA_203817",
         "MTA_200455",
         "MTA_200456",
-        "MTA_905161",
-        "MTA_203831"
+        "MTA_203831",
+        "MTA_905161"
     ],
     "DOWNTOWN LOOP via CHURCH ST via WATER ST": [
         "MTA_200386",
@@ -3014,8 +3014,8 @@
         "MTA_203542",
         "MTA_203543",
         "MTA_203544",
-        "MTA_905010",
-        "MTA_905179"
+        "MTA_905179",
+        "MTA_905010"
     ],
     "ST GEORGE FERRY via HYLAN": [
         "MTA_905180",
@@ -3605,8 +3605,8 @@
         "MTA_202262",
         "MTA_202263",
         "MTA_202264",
-        "MTA_905179",
-        "MTA_203069"
+        "MTA_203069",
+        "MTA_905179"
     ],
     "TOTTENVILLE via BLMINGDALE RD via AMBOY": [
         "MTA_405011",
@@ -4573,9 +4573,9 @@
         "MTA_802169",
         "MTA_802159",
         "MTA_104081",
-        "MTA_802158",
+        "MTA_104066",
         "MTA_802167",
-        "MTA_104066"
+        "MTA_802158"
     ],
     "WEST FARMS RD SOUTHRN BL via BRCKNR": [
         "MTA_802168",
@@ -5365,8 +5365,8 @@
         "MTA_901329",
         "MTA_901331",
         "MTA_901332",
-        "MTA_304722",
-        "MTA_901333"
+        "MTA_901333",
+        "MTA_304722"
     ],
     "KENSINGTON CORTELYOU RD via 7 AV": [
         "MTA_306337",
@@ -7667,8 +7667,8 @@
         "MTA_100368",
         "MTA_802150",
         "MTA_100369",
-        "MTA_104483",
-        "MTA_902102"
+        "MTA_902102",
+        "MTA_104483"
     ],
     "WASHINGTON HEIGHTS G.W. BRIDGE": [
         "MTA_103910",
@@ -7732,8 +7732,8 @@
         "MTA_100854",
         "MTA_104332",
         "MTA_404170",
-        "MTA_150119",
-        "MTA_404144"
+        "MTA_404144",
+        "MTA_150119"
     ],
     "G TRAIN TO BEDFORD-NOSTRAND AV": [
         "MTA_901117",
@@ -8628,8 +8628,8 @@
         "MTA_904043",
         "MTA_402133",
         "MTA_904044",
-        "MTA_803036",
-        "MTA_904045"
+        "MTA_904045",
+        "MTA_803036"
     ],
     "FORDHAM CENTER VALENTINE AV": [
         "MTA_104372",
@@ -9447,8 +9447,8 @@
         "MTA_500287",
         "MTA_500297",
         "MTA_500288",
-        "MTA_500298",
-        "MTA_904104"
+        "MTA_904104",
+        "MTA_500298"
     ],
     "JAMAICA HILLSIDE-153 ST": [
         "MTA_500304",
@@ -10455,8 +10455,8 @@
         "MTA_404014",
         "MTA_404015",
         "MTA_404147",
-        "MTA_903092",
-        "MTA_803194"
+        "MTA_803194",
+        "MTA_903092"
     ],
     "WEST VILLAGE ABINGDON SQ via 9 AV": [
         "MTA_803195",
@@ -11788,8 +11788,8 @@
         "MTA_403311",
         "MTA_404916",
         "MTA_400157",
-        "MTA_404010",
-        "MTA_404823"
+        "MTA_404823",
+        "MTA_404010"
     ],
     "LIMITED EAST VILLAGE 8 ST via 5 AV": [
         "MTA_404876",
@@ -13582,8 +13582,8 @@
         "MTA_301815",
         "MTA_301804",
         "MTA_301816",
-        "MTA_307182",
-        "MTA_901495"
+        "MTA_901495",
+        "MTA_307182"
     ],
     "CROWN HEIGHTS EASTERN PKY": [
         "MTA_301726",
@@ -14572,8 +14572,8 @@
         "MTA_500568",
         "MTA_503100",
         "MTA_504091",
-        "MTA_505322",
-        "MTA_804053"
+        "MTA_804053",
+        "MTA_505322"
     ],
     "JAMAICA CENTER via MERRICK BL": [
         "MTA_503105",
@@ -15023,8 +15023,8 @@
         "MTA_307636",
         "MTA_303335",
         "MTA_307895",
-        "MTA_801144",
-        "MTA_901681"
+        "MTA_901681",
+        "MTA_801144"
     ],
     "SELECT BUS W SIDE RIVERSIDE DR CROSSTOWN": [
         "MTA_401880",
@@ -15710,8 +15710,8 @@
         "MTA_202844",
         "MTA_202842",
         "MTA_202841",
-        "MTA_905162",
-        "MTA_203438"
+        "MTA_203438",
+        "MTA_905162"
     ],
     "PT RCHMND via NARROWS RD N via WATCHOGUE": [
         "MTA_404923",
@@ -15907,8 +15907,8 @@
         "MTA_306881",
         "MTA_307600",
         "MTA_306855",
-        "MTA_901012",
-        "MTA_306857"
+        "MTA_306857",
+        "MTA_901012"
     ],
     "FORT TOTTEN": [
         "MTA_504476",
@@ -16000,8 +16000,8 @@
         "MTA_805084",
         "MTA_203523",
         "MTA_203524",
-        "MTA_202657",
-        "MTA_805087"
+        "MTA_805087",
+        "MTA_202657"
     ],
     "BED-STUY BWAY-HALSEY via KINGS HWY": [
         "MTA_308068",
@@ -16804,10 +16804,10 @@
         "MTA_202991",
         "MTA_203192",
         "MTA_202931",
-        "MTA_905190",
-        "MTA_905010",
+        "MTA_203463",
         "MTA_905161",
-        "MTA_203463"
+        "MTA_905010",
+        "MTA_905190"
     ],
     "EAST SIDE 1 AV CROSSTOWN": [
         "MTA_401933",
