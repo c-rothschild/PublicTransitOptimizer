@@ -64,13 +64,33 @@ class BusMap:
             routes.append(node_list)
         ox.plot.plot_graph_routes(self.G, routes)
     
+    def get_travel_time(self, route_name, startId, stopId):
+        ''' 
+        get travel time between two stops
+        '''
+        route = self.route_lists[route_name]
+        startIdx = route.index(startId)
+
+        travel_time = 0
+
+        for idx in range(startIdx + 1, len(route)):
+            prevosmid = self.bus_stop_info[route[idx -1]]['osmid']
+            curosmid = self.bus_stop_info[route[idx]]['osmid']
+            travel_time += myMap.G.edges[(prevosmid, curosmid, 0)]['travel_time']
+            if(route[idx] == stopId):
+                return travel_time
+            
+        raise KeyError(f'Stop {stopId} not found in route')
+
+    
             
 
 
 if __name__ == "__main__":
     myMap = BusMap()
     all_routes = list(myMap.route_lists.keys())
-    myMap.plot_routes(route_names=all_routes)
+    print(myMap.get_travel_time("Q26 - FRESH MEADOWS HOLLIS COURT BL via 46 AV","MTA_504994", "MTA_502762"))
+    #myMap.plot_routes(route_names=all_routes[:20])
     
     
     
