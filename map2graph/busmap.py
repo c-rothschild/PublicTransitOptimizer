@@ -49,21 +49,28 @@ class BusMap:
 
 
 
-    def plot_route(self, route_name):
+    def plot_routes(self, route_names):
         '''
-        plot a given bus route on a map
+        plot a list of given bus routes on a map
         find the route name you would like to plot by searching through all_route_lists.json or self.routes
         '''
-        route_list = self.route_lists[route_name]
-        osmid_list = list(map(lambda x: self.bus_stop_info[x]['osmid'], route_list))
-        ox.plot.plot_graph_route(self.G, osmid_list)
+        routes = []
+        for route_name in route_names:
+            route_list = self.route_lists[route_name]
+            node_list = list(map(lambda x: self.bus_stop_info[x]['osmid'], route_list))
+            # ignore empty routes
+            if len(node_list) == 0:
+                continue
+            routes.append(node_list)
+        ox.plot.plot_graph_routes(self.G, routes)
     
             
 
 
 if __name__ == "__main__":
     myMap = BusMap()
-    myMap.plot_route('M101 - LIMITED EAST VILLAGE 3 AV-6 ST via LEX')
+    all_routes = list(myMap.route_lists.keys())
+    myMap.plot_routes(route_names=all_routes[:20])
     
     
     
