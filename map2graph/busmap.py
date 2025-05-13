@@ -62,7 +62,6 @@ class BusMap:
             
         raise KeyError(f'Stop {stopId} not found in route')
 
-    
             
 
 
@@ -70,7 +69,7 @@ if __name__ == "__main__":
     myMap = BusMap()
     all_routes = list(myMap.route_lists.keys())
     print(myMap.get_travel_time("Q26 - FRESH MEADOWS HOLLIS COURT BL via 46 AV","MTA_504994", "MTA_502762"))
-    #myMap.plot_routes(route_names=all_routes[:20])
+    myMap.plot_routes(route_names=all_routes)
     
     
     
