@@ -70,7 +70,7 @@ class BusMap:
 if __name__ == "__main__":
     myMap = BusMap()
     all_routes = list(myMap.route_lists.keys())
-    myMap.plot_routes(route_names=all_routes[:20])
+    myMap.plot_routes(route_names=all_routes)
     
     
     
