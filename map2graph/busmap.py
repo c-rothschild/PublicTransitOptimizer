@@ -12,7 +12,7 @@ import geopandas as gpd
 
 load_dotenv()
 
-MTA_API_KEY = os.getenv('MTA_API_KEY')
+# MTA_API_KEY = os.getenv('MTA_API_KEY')
 GRAPHML_PATH = os.getenv('GRAPHML_PATH')
 ROUTE_LISTS_PATH = os.getenv('ROUTE_LISTS_PATH')
 BUS_STOP_INFO_PATH = os.getenv('BUS_STOP_INFO_PATH')
@@ -28,26 +28,6 @@ class BusMap:
 
         with open(BUS_STOP_INFO_PATH) as json_file:
             self.bus_stop_info = json.load(json_file)
-
-
-    def load_routes(self):
-        """
-        adds route name(s) to bus stop dict
-        """
-
-        self.routes = {}
-
-        #iterate through each route in route_lists
-        for route_name in self.route_lists.keys():
-            for stop in self.route_lists[route_name]:
-                self.bus_stop_info[stop]['diroutes'] = self.bus_stop_info[stop].get('diroutes', []) + [route_name]
-                self.bus_stop_info[stop]['diroutes'] = list(set(self.bus_stop_info[stop]['diroutes'] ))
-
-        filename = BUS_STOP_INFO_PATH
-        with open(filename, 'w') as file:
-            json.dump(self.bus_stop_info, file, indent=4)
-
-
 
     def plot_routes(self, route_names):
         '''
