@@ -63,3 +63,29 @@ Usage:
 
 Returns:
   the amount of seconds it takes to travel between the two inputted nodes
+
+
+## Tripsim.py 
+NEEDS TO CHANGE PATH BASED ON MACHINE
+GRAPHML_PATH = "/PublicTransitOptimizer/map2graph/graph_data/stations.graphml"
+ROUTE_LISTS_PATH = "/PublicTransitOptimizer/map2graph/graph_data/all_route_lists.json"
+BUS_STOP_INFO_PATH = "/PublicTransitOptimizer/map2graph/graph_data/bus_info_dict.json"
+
+###visualizetrip
+Params:
+  G - the Graph of New York
+  routelists - From Route Lists (data from all_route_lists.json)
+  busstopinfo - From Bus Stop info (data from bus_info_dict.json)
+  routename - Name of route being used
+  startstopid - ID of stop
+  endstopid - ID of stop
+
+Usage:
+>visualizetrip(G, routelists, busstopinfo, routename, startid, targetid)
+>#route = input("What route do you want to take")
+ #start = input("What stop are you at?")
+ #target = input("Where do you wanna go?")
+>Then transfer to ids, the the function can make sense of them
+
+Returns:
+An text describing an error, displays a matplotlib graph that shows the map of all bus nodes in ny, with the routes.
