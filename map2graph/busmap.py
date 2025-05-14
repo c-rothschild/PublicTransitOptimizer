@@ -61,15 +61,42 @@ class BusMap:
                 return travel_time
             
         raise KeyError(f'Stop {stopId} not found in route')
+    
+    def stopIds_to_nodes(self, stop_id_list):
+        return list(map(lambda x: self.bus_stop_info[x]['osmid'], stop_id_list))
+    
+    def get_route_stopIds(self, route_name):
+        return self.route_lists[route_name]
+    
+    def get_all_stops(self):
+        return list(self.route_lists.keys())
+    
+    def set_stop_subgraph(self):
+        ''' 
+        create a subgraph comprised only of bus stations
+        '''
+        all_routes = self.get_all_stops()
+        all_stop_nodes =  []
+
+        for route in all_routes:
+            all_stop_nodes.extend(self.get_all_stops(route))
+        
+        print(all_stop_nodes)
 
             
 
 
 if __name__ == "__main__":
+    # sample usage:
     myMap = BusMap()
-    all_routes = list(myMap.route_lists.keys())
-    print(myMap.get_travel_time("Q26 - FRESH MEADOWS HOLLIS COURT BL via 46 AV","MTA_504994", "MTA_502762"))
-    myMap.plot_routes(route_names=all_routes)
+
+    all_routes = myMap.get_all_stops()
+    stops = myMap.get_route_stopIds(all_routes[0])
+    myMap.set_stop_subgraph()
+
+    print(myMap.stopIds_to_nodes(stops))
+
+    # myMap.plot_routes(route_names=all_routes)
     
     
     
