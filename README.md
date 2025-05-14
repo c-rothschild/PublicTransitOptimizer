@@ -89,3 +89,8 @@ Usage:
 
 Returns:
 An text describing an error, displays a matplotlib graph that shows the map of all bus nodes in ny, with the routes.
+
+## FinalProject307
+Note Takes a long time to run
+Usage:
+>Test Max Flow for different examples of public transportation in NYC
