@@ -66,7 +66,6 @@ Returns:
 
 
 ## Tripsim.py 
-NEEDS TO CHANGE PATH BASED ON MACHINE
 GRAPHML_PATH = "/PublicTransitOptimizer/map2graph/graph_data/stations.graphml"
 ROUTE_LISTS_PATH = "/PublicTransitOptimizer/map2graph/graph_data/all_route_lists.json"
 BUS_STOP_INFO_PATH = "/PublicTransitOptimizer/map2graph/graph_data/bus_info_dict.json"
