@@ -97,8 +97,13 @@ the min,max amount of walking time and traveling time.
 By that, we could judge whether or not will there be people mad about what the public transport
 we have described previously.
 
-## FinalProject307
-Note Takes a long time to run
+## FinalProject307 (1).ipynb
+Note: Takes a long time to run. Can potentially be adjusted with for loops outside of functions
 Usage:
 >Test Max Flow for different examples of public transportation in NYC
+>Compare real life data Simulations for different modes of transportation in NYC and their max flow
+>Show a test model of how this data could be optimized
+
+Returns:
+Graphs of the max flow and analysis of the graphs along with the big O time complexity
 
