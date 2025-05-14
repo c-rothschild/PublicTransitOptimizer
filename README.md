@@ -101,9 +101,10 @@ we have described previously.
 Note: Takes a long time to run. Can potentially be adjusted with for loops outside of functions
 
 Usage:
->Test Max Flow for different examples of public transportation in NYC
->Compare real life data Simulations for different modes of transportation in NYC and their max flow
->Show a test model of how this data could be optimized
+> Open file and run each set of code in order. 
+
+## Purpose
+Tests Max Flow for different examples of public transportation in NYC. Compares real life data Simulations for different modes of transportation in NYC and their max flow. Shows a test model of how this data could be optimized
 
 Returns:
 Graphs of the max flow and analysis of the graphs along with the big O time complexity
