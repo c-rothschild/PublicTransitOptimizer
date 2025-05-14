@@ -79,9 +79,10 @@ class BusMap:
         all_stop_nodes =  []
 
         for route in all_routes:
-            all_stop_nodes.extend(self.get_all_stops(route))
+            stopIds = self.get_route_stopIds(route)
+            all_stop_nodes.extend(self.stopIds_to_nodes(stopIds))
         
-        print(all_stop_nodes)
+        self.stop_subgraph = self.G.subgraph(all_stop_nodes)
 
             
 
@@ -94,7 +95,13 @@ if __name__ == "__main__":
     stops = myMap.get_route_stopIds(all_routes[0])
     myMap.set_stop_subgraph()
 
+    path = nx.dijkstra_path(myMap.stop_subgraph,42973027,42736818, weight='travel_time')
+    
+    ox.plot.plot_graph_route(myMap.G, path)
+    
     print(myMap.stopIds_to_nodes(stops))
+
+
 
     # myMap.plot_routes(route_names=all_routes)
     
