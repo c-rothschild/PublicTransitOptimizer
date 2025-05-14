@@ -97,13 +97,13 @@ if __name__ == "__main__":
 
     path = nx.dijkstra_path(myMap.stop_subgraph,42973027,42736818, weight='travel_time')
     
-    ox.plot.plot_graph_route(myMap.G, path)
+    # ox.plot.plot_graph_route(myMap.G, path)
     
     print(myMap.stopIds_to_nodes(stops))
 
 
 
-    # myMap.plot_routes(route_names=all_routes)
+    myMap.plot_routes(route_names=all_routes)
     
     
     

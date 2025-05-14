@@ -1,4 +1,4 @@
-
+# Public Transit Optimizer + Simulator
 
 ## map2graph/graph_data/
 
@@ -71,7 +71,7 @@ GRAPHML_PATH = "/PublicTransitOptimizer/map2graph/graph_data/stations.graphml"
 ROUTE_LISTS_PATH = "/PublicTransitOptimizer/map2graph/graph_data/all_route_lists.json"
 BUS_STOP_INFO_PATH = "/PublicTransitOptimizer/map2graph/graph_data/bus_info_dict.json"
 
-###visualizetrip
+### visualizetrip
 Params:
   G - the Graph of New York
   routelists - From Route Lists (data from all_route_lists.json)
@@ -89,3 +89,12 @@ Usage:
 
 Returns:
 An text describing an error, displays a matplotlib graph that shows the map of all bus nodes in ny, with the routes.
+
+### testOutMapv3.ipynb
+DO NOT CHANGE busmap.py, THIS FUNCTION IMPLEMENTS busmap.py
+## Purpose
+If you run all blocks except for block multi-threading, it should print out 
+the min,max amount of walking time and traveling time.
+By that, we could judge whether or not will there be people mad about what the public transport
+we have described previously.
+
